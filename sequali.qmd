@@ -1,0 +1,24 @@
+---
+title: "sequali"
+format: html
+editor: visual
+---
+
+## Sequali
+
+How to use sequali
+
+```{bash}
+sequali /data/raw_reads/ERR1539001.fastq.gz
+```
+
+## Filtlong
+
+```{bash}
+# for filtering
+#filtlong (--min_length 1000 and either --keep_percent 90 or --min_mean_q 7)
+
+filtlong --min_length 1000 --keep_percent 90 \
+  data/raw_reads/ERR1539001.fastq.gz | gzip > data/clean_reads/ont_filtered.fastq.gz
+  
+```
